@@ -1,0 +1,23 @@
+.flashcard {
+  width: 35%;
+  border: 1px solid #EA2E49;
+  border-radius: 5px;
+  color: #333745;
+  background-color: #DAEDE2;
+  text-align: center;
+  align-content: center;
+  padding: 40px;
+}
+
+.flashcard:hover {
+  color: #DAEDE2;
+  background-color: #333745;
+}
+
+.question {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  min-height: 200px;
+  justify-content: center;
+}
