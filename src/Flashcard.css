@@ -1,23 +1,60 @@
 .flashcard {
   width: 35%;
-  border: 1px solid #EA2E49;
   border-radius: 5px;
-  color: #333745;
-  background-color: #DAEDE2;
   text-align: center;
   align-content: center;
-  padding: 40px;
+  /* padding: 40px; */
+  perspective: 1000;
+  height: 300px;
 }
 
-.flashcard:hover {
-  color: #DAEDE2;
-  background-color: #333745;
+.flipper {
+   /* transform-style: preserve-3d;  */
+  transition: all 0.25s linear;
+  background-color: #EC576B;
+  border-radius: 5px;
+  height: 100%;
 }
+
+.flashcard:hover .flipper {
+  transform: rotateY(180deg);
+  background-color: #000000; 
+}
+
 
 .question {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
-  min-height: 200px;
+  height: 100%;
+  border-radius: 5px;
   justify-content: center;
+  backface-visibility: hidden;
+  color: #000000; 
+  padding: 40px;
+  box-sizing: border-box;
+}
+.flashcard:hover .question {
+  z-index: -2;
+}
+
+.answer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  transform: rotateY(180deg);
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  top:0;
+  color: #EC576B; 
+  border-radius: 5px;
+  z-index: -1;
+  padding: 40px;
+  box-sizing: border-box;
+}
+
+.flashcard:hover .answer {
+  z-index: 1;
 }
