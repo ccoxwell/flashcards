@@ -1,6 +1,6 @@
 .flashcard {
   width: 35%;
-  border-radius: 5px;
+  border-radius: 30px 0 30px 0;
   text-align: center;
   align-content: center;
   /* padding: 40px; */
@@ -12,7 +12,7 @@
    /* transform-style: preserve-3d;  */
   transition: all 0.25s linear;
   background-color: #EC576B;
-  border-radius: 5px;
+  border-radius: 30px 0 30px 0;
   height: 100%;
 }
 
@@ -21,13 +21,12 @@
   background-color: #000000; 
 }
 
-
 .question {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   height: 100%;
-  border-radius: 5px;
+  border-radius: 30px 0 30px 0;
   justify-content: center;
   backface-visibility: hidden;
   color: #000000; 
@@ -49,7 +48,7 @@
   width: 100%;
   top:0;
   color: #EC576B; 
-  border-radius: 5px;
+  border-radius: 30px 0 30px 0;
   z-index: -1;
   padding: 40px;
   box-sizing: border-box;
