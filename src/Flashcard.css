@@ -16,7 +16,7 @@
   height: 100%;
 }
 
-.flashcard:hover .flipper {
+.flashcard:hover .flipper, .flashcard:active .flipper {
   transform: rotateY(180deg);
   background-color: #000000; 
 }

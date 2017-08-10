@@ -8,6 +8,6 @@
   transition: all 0.5s ease-in-out;
 }
 
-.direction:hover {
+.direction:hover, direction:active {
   background-color: #4e83b5;
 }
