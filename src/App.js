@@ -5,6 +5,10 @@ import base from './base'
 import './App.css';
 
 class App extends Component {
+  /*
+    create state ... add questions to state ... pass questions to
+    Flashcard through science or magic
+  */
   constructor() {
     super()
     this.getQuestions = this.getQuestions.bind(this)
@@ -16,6 +20,7 @@ class App extends Component {
       asArray: true
     }).then(data => {
       console.log(data)
+
     }).catch(error => {
       console.error(error);
     })
@@ -25,7 +30,7 @@ class App extends Component {
     return (
       <div className="container">
         <NavButton direction="previous" content="<<" />
-        <Flashcard/>
+        <Flashcard questions={}/>
         <NavButton direction="next" content=">>" />
         <button onClick={this.getQuestions}>get questions</button>
       </div>
