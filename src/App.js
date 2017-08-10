@@ -11,28 +11,27 @@ class App extends Component {
   */
   constructor() {
     super()
-    this.getQuestions = this.getQuestions.bind(this)
+
+    this.state = {
+      questions: ['starting value']
+    }
   }
 
-  getQuestions() {
-    base.fetch('questions', {
+  componentWillMount() {
+    base.syncState('questions', {
       context: this,
+      state: 'questions',
       asArray: true
-    }).then(data => {
-      console.log(data)
-
-    }).catch(error => {
-      console.error(error);
     })
   }
+
 
   render() {
     return (
       <div className="container">
         <NavButton direction="previous" content="<<" />
-        <Flashcard questions={}/>
+        <Flashcard questions={this.state} />
         <NavButton direction="next" content=">>" />
-        <button onClick={this.getQuestions}>get questions</button>
       </div>
     )
   }
