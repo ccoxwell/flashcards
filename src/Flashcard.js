@@ -5,8 +5,8 @@ class Flashcard extends Component {
 
   render() {
     return (
-      <div className="flashcard" ontouchstart="">
-        <div className="flipper">
+      <div className="flashcard">
+        <div className="flipper" ontouchstart="">
           <div className="card-content question">
             <h2>{this.props.questions.questions[0].question}</h2>
           </div>
