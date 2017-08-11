@@ -7,10 +7,10 @@ class Flashcard extends Component {
     return (
       <div className="flashcard">
         <div className="flipper">
-          <div className="question">
+          <div className="card-content question">
             <h2>{this.props.questions.questions[0].question}</h2>
           </div>
-          <div className="answer">
+          <div className="card-content answer">
             <h2>{this.props.questions.questions[0].answer}</h2>
           </div>
         </div>
