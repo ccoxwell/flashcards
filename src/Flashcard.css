@@ -34,7 +34,7 @@
   z-index: 10;
 }
 
-.content:hover .question {
+.content:hover .question, .content:active .question {
   z-index: 10;
 }
 
